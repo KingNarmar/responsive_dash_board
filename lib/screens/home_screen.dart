@@ -8,8 +8,8 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DashboardAdaptiveLayoutWidget(
-      mobileLayout: (context) => const SizedBox(),
-      tabletLayout: (context) => const SizedBox(),
+      mobileLayout: (context) => const Text("Mobile Layout"),
+      tabletLayout: (context) => const Text("Tablet Layout"),
       desktopLayout: (context) => const DashboardDesktopLayout(),
     );
   }

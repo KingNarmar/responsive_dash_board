@@ -7,7 +7,7 @@ class DashboardAdaptiveLayoutWidget extends StatelessWidget {
     required this.tabletLayout,
     required this.desktopLayout,
   });
-  //using widget Builder insted of Widget
+
   final WidgetBuilder mobileLayout, tabletLayout, desktopLayout;
   @override
   Widget build(BuildContext context) {
