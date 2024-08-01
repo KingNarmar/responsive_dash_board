@@ -8,6 +8,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0xffF7F9FA),
       body: DashboardAdaptiveLayoutWidget(
         mobileLayout: (context) => const Text("Mobile Layout"),
         tabletLayout: (context) => const Text("Tablet Layout"),
