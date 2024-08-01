@@ -5,7 +5,7 @@ import 'package:responsive_dash_board/screens/home_screen.dart';
 void main() {
   runApp(
     DevicePreview(
-      enabled: true,
+      enabled: false,
       builder: (context) => const AdaptiveDashboard(),
     ),
   );
