@@ -18,6 +18,7 @@ class AllExpensesHeader extends StatelessWidget {
         Expanded(child: SizedBox()),
         RangeOptions()
       ],
+      
     );
   }
 }
