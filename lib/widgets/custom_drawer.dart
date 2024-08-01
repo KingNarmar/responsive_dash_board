@@ -13,31 +13,42 @@ class CustomDrawer extends StatelessWidget {
     final double height = MediaQuery.of(context).size.height;
     return Container(
       color: Colors.white,
-      child: Column(
-        children: [
-          const UserInfoListTile(
-            image: Assets.imagesAvatar3,
-            title: "Lekan Okeowo",
-            subTitle: "demo@gmail.com",
+      child: CustomScrollView(
+        slivers: [
+          const SliverToBoxAdapter(
+            child: UserInfoListTile(
+              image: Assets.imagesAvatar3,
+              title: "Lekan Okeowo",
+              subTitle: "demo@gmail.com",
+            ),
           ),
-          SizedBox(
-            height: height * 0.00814664,
+          SliverToBoxAdapter(
+            child: SizedBox(
+              height: height * 0.00814664,
+            ),
           ),
           const DrawerItemListView(),
-          const Expanded(
-            child: SizedBox(),
+          SliverFillRemaining(
+            hasScrollBody: false,
+            child: Column(
+              children: [
+                const Expanded(
+                  child: SizedBox(),
+                ),
+                InActiveDrawerItem(
+                  drawerItemModel: DrawerItemModel(
+                      image: Assets.imagesSettings, title: "Setting system"),
+                ),
+                InActiveDrawerItem(
+                  drawerItemModel: DrawerItemModel(
+                      image: Assets.imagesLogout, title: "Logout account"),
+                ),
+                const SizedBox(
+                  height: 48,
+                )
+              ],
+            ),
           ),
-          InActiveDrawerItem(
-            drawerItemModel: DrawerItemModel(
-                image: Assets.imagesSettings, title: "Setting system"),
-          ),
-          InActiveDrawerItem(
-            drawerItemModel: DrawerItemModel(
-                image: Assets.imagesLogout, title: "Logout account"),
-          ),
-          const SizedBox(
-            height: 48,
-          )
         ],
       ),
     );
